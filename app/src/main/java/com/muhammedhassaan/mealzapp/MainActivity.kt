@@ -10,6 +10,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.lifecycleScope
+import com.muhammedhassaan.mealzapp.remote.RetrofitFactory
+import com.muhammedhassaan.mealzapp.screens.MainScreen
 import com.muhammedhassaan.mealzapp.ui.theme.MealzAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    MainScreen(this)
                 }
             }
         }
