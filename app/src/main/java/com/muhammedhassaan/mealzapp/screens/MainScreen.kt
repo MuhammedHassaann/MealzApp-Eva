@@ -28,7 +28,7 @@ fun MainScreen(context: Context){
     ){
         items(vm.list){
             MealItem(category = it ){category->
-                Toast.makeText(context,category.strCategory,Toast.LENGTH_SHORT).show()
+                vm.insertMeal(category)
             }
         }
     }
